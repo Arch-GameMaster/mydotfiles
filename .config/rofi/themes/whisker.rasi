@@ -1,0 +1,194 @@
+/**
+ * ROFI Color theme
+ * User: YoMero
+ * Copyright: free
+ */
+// @import "colors/catppuccin-latte"
+// @import "colors/catppuccin-frappe"
+// @import "colors/catppuccin-macchiato"
+ @import "~/.config/rofi/colors/catppuccin-mocha"
+
+* {
+  selected-active-foreground:  @background;
+  lightfg:                     @text;
+  separatorcolor:              @foreground;
+  urgent-foreground:           @red;
+  alternate-urgent-background: @lightbg;
+  lightbg:                     @background;
+  background-color:            transparent;
+  border-color:                @foreground;
+  normal-background:           @background;
+  selected-urgent-background:  @red;
+  alternate-active-background: @lightbg;
+  spacing:                     2;
+  alternate-normal-foreground: @foreground;
+  urgent-background:           @background;
+  selected-normal-foreground:  @lightbg;
+  active-foreground:           @blue;
+  background:                  @mantle;
+  selected-active-background:  @blue;
+  active-background:           @background;
+  selected-normal-background:  @lightfg;
+  alternate-normal-background: @lightbg;
+  foreground:                  @text;
+  selected-urgent-foreground:  @background;
+  normal-foreground:           @foreground;
+  alternate-urgent-foreground: @red;
+  alternate-active-foreground: @blue;
+
+}
+
+//* {
+//  /* Default background color */
+//  background-color: transparent;
+//  text-color:       @foreground;
+//}
+
+configuration {
+  font: "Fira Sans 10";
+  show-icons: true;
+  icon-theme: "candy-icons";
+  hover-select: true;
+  me-select-entry: "MousePrimary";
+  me-accept-entry: "!MousePrimary";
+}
+window {
+  padding: 1em;
+  location: north west;
+  anchor: north west;
+  x-offset: 5px;
+  y-offset: 30px;
+
+  border-color: #11111b;
+  border:       2px;
+  border-radius: 10px;
+
+  width:  512px; 
+//  height: 768px;
+
+  background-color: #11111bc0;
+
+//  background-image: url("~/Downloads/Anime-girls/438862041_831111709048105_1933342560581354270_n.jpg", width);
+}
+
+mainbox {
+  spacing: 0px;
+  children: [inputbar,wrapper-mode-switcher,listview];
+}
+
+element {
+  background: transparent;
+  children: [ element-icon, element-text ];
+}
+element,element-text,element-icon, button {
+    cursor: pointer;
+}
+
+inputbar {
+  margin: 0px 0px 0.5em 0em;
+  spacing: 0.4em;
+  children: [ button-a, entry,overlay,case-indicator, button-b];
+}
+
+button-a, button-b {
+  expand: false;
+  content: "🐧";
+  action: "kb-primary-paste";
+  horizontal-align: 0.5;
+}
+button-b {
+  action: "kb-screenshot";
+}
+
+listview, inputbar, message {
+  padding: 0.5em;  
+  border-color: @base;
+  border:        2px;
+  border-radius: 10px;
+  background-color: #11111b64;
+
+  columns: 4;
+  lines:   4;
+}
+listview {
+  border:       0px 2px 2px 2px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+
+element {
+    border:  0;
+    border-radius: 10px;
+    padding:      10px;
+    font:         "Adwaita Sans 8";
+    orientation: vertical;
+}
+element-icon {
+  size: 3em;
+}
+
+element  selected {
+  border-color: @blue;
+  border:       2px;
+  border-radius: 10px;
+  background-color: @base;
+}
+
+element-text, element-icon {
+  font:             inherit; 
+  horizontal-align: 0.5;
+}
+
+wrapper-mode-switcher {
+    orientation: horizontal;
+
+    expand:     false;
+    spacing:    0;
+    children: [ icon-ms-ic1, mode-switcher, icon-ms-ic2 ];
+}
+icon-ms-ic1 {
+    filename: "go-previous";
+    action: "kb-mode-previous";
+}
+icon-ms-ic2 {
+    filename: "go-next";
+    action: "kb-mode-next";
+}
+icon-ms-ic1,icon-ms-ic2 {
+    size: 16;
+    vertical-align: 0.8;
+    expand:        false;
+    border:       0px 0px 2px ;
+    border-color: transparent;
+}
+
+mode-switcher {
+    border:  0px;
+    spacing: 0px;
+    expand: true;
+}
+button {
+    text-color: @foreground;
+    border:       0px 0px 2px ;
+    border-color: @base;
+    border-radius:    10px 10px 0 0;
+//    background-image: linear-gradient(to bottom, #11111b64, #313244);
+    background-color: transparent;
+    horizontal-align: 0.5;
+}
+button selected.normal {
+    text-color: @foreground;
+    margin: 0px;
+    padding: 0px;
+
+    border:       2px 2px 0px ;
+    border-color: @base;
+    border-radius:    10px 10px 0 0;
+    background-image: linear-gradient(to bottom, #11111b, #313244);
+}
+
+entry {
+    
+    placeholder: "Search";
+    placeholder-color: @overlay1;
+  }
