@@ -120,5 +120,4 @@ source $ZSH/oh-my-zsh.sh
  prompt pure
 
  alias slam='/usr/bin/git --git-dir=$HOME/mydotfiles/ --work-tree=$HOME'
- slam config --local status.showUntrackedFiles no
-# echo "alias myconfig='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'" >> $HOME/.zshrc
+
