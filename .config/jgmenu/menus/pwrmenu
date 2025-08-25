@@ -1,0 +1,4 @@
+   Lock screen,      swaylock -C ~/.config/sway/lock/config,     
+   Sleep,          ~/scripts/lock_n_sleep.sh,   
+   Shutdown,         systemctl -i poweroff,  
+   Reboot,           systemctl -i reboot,    

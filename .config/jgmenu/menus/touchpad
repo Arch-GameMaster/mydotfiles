@@ -1,0 +1,4 @@
+tapping ON,     /home/gamemaster/scripts/touchpad-tap.sh, 
+tapping OFF,    /home/gamemaster/scripts/touchpad-tap-off.sh, 
+
+

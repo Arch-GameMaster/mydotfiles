@@ -1,0 +1,3 @@
+English (EN),       setxkbmap -layout us, ,
+Spanish (ES),       setxkbmap -layout es, ,
+Russian (RU),       setxkbmap -layout ru, ,

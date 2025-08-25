@@ -1,0 +1,49 @@
+# My Settings
+^sep(  Quick Settings)
+Enable compositor,^checkout(settings1)
+Enable touchpad tapping, ^checkout(settings2)
+Show Polybar, ^checkout(settings3)
+Alsa Sound, ^checkout(settings4)
+Keyboard layout, ^checkout(kblayout)
+Display Scaling, ^checkout(settings5)
+GVFS daemon, ^checkout(settings6)
+
+ ^tag(settings1)
+  Picom,^checkout(settings1.1)
+  Metacity,^checkout(settings1.2)
+  ^tag(settings1.1)
+   ON, picom
+   OFF, killall picom
+  ^tag(settings1.2)
+   ON, metacity --composite
+   OFF, metacity --no-composite
+
+ ^tag(settings2)
+  ON,  xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+  OFF, xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 0
+
+ ^tag(settings3)
+  Bar 1 (Top), killall polybar && polybar -r --config=~/.config/polybar/statusbar.ini &
+  Bar 2 (Top), killall polybar && polybar -r right & polybar -r middle & polybar -r left &
+  OFF, killall polybar
+
+ ^tag(settings4)
+  Restore, alsactl --file ~/.config/asound.state restore
+
+ ^tag(kblayout)
+  English (EN),       setxkbmap -layout us
+  Spanish (ES),       setxkbmap -layout es
+  Russian (US),       setckbmap -layout ru
+
+ ^tag(settings5)
+  Default (x1), xrandr --output LVDS1 --scale 1
+  (x1.25), xrandr --output LVDS1 --scale 1.25
+  (x1.3), xrandr --output LVDS1 --scale 1.3
+  (x1.5), xrandr --output LVDS1 --scale 1.5
+  (1920x1080), xrandr --output LVDS1 --scale 1.8
+
+ ^tag(settings6)
+  disable, systemctl --user stop gvfs-daemon
+  enable, systemctl --user start gvfs-daemon
+
+

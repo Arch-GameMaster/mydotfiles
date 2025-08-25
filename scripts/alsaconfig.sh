@@ -1,0 +1,4 @@
+#!/bin/sh
+
+alsactl --file ~/.config/asound.state restore
+
