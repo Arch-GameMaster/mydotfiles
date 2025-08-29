@@ -18,7 +18,7 @@
 5. i3lock (opcional)
 6. polybar
 7. polycat (opcional)
-8. ncmpcpp (para crear facilmente las playlist para mpd)
+8. ncmpcpp (para crear las playlist y despues integrarlas a jgmenu)
 
 **Tambien es necesario tener instalado las siguientes fuentes:**
 1. Symbols Nerd Font Mono (para los iconos)
@@ -33,4 +33,6 @@ Para ejecutar este polybar, necesitas haber descargado el script "mypolybar.sh" 
 
 `~/mypolybar.sh`
 
-**NOTA.** Para usarlo en monitores de 1920x1080+ tendras que abrir el archivo config.ini con un editor de texto para cambiar el tamaño de la barra y las fuentes a tu gusto
+**NOTA.** Para usarlo en monitores de 1920x1080+ tendras que abrir el archivo config.ini con un editor de texto y cambiar el tamaño de la barra y el tamaño de las fuentes a tu gusto
+
+
