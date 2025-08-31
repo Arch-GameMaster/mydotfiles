@@ -113,11 +113,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias lf=lfrun
+ alias slam='/usr/bin/git --git-dir=$HOME/mydotfiles/ --work-tree=$HOME'
+ alias amimir='sleep 5h && killall chrome; sleep 1m && systemctl -i suspend'
+ alias polybar='~/mypolybar.sh'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
  autoload -U promptinit; promptinit
  prompt pure
 
- alias slam='/usr/bin/git --git-dir=$HOME/mydotfiles/ --work-tree=$HOME'
 

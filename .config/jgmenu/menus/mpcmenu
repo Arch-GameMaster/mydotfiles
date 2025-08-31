@@ -1,7 +1,7 @@
 ^sep(MPC Media Controls) 
  Start MPD,     mpd,
  Turn off MPD,     mpd --kill,
-Start MPD status bar,  polybar -r -c ~/.config/polybar/bspwm/config.ini bottom,
+View song status, ^checkout(status), 
  Shuffle,   mpc shuffle
  Repeat,     ^checkout(Repeat),
  Random,    ^checkout(Random),
@@ -9,6 +9,11 @@ Start MPD status bar,  polybar -r -c ~/.config/polybar/bspwm/config.ini bottom,
 󰑘 Single track,     ^checkout(Single),
 󰲸 Load playlist,    ^checkout(playlist),
  Clear list,  mpc clear,
+
+ ^tag(status)
+  Conky, conky -c ~/.conky/mpcstatus/mpcstatus 
+  Polybar,  polybar -r -c ~/.config/polybar/bspwm/config.ini bottom,
+
 
  ^tag(Repeat)
   ON, mpc repeat on,
