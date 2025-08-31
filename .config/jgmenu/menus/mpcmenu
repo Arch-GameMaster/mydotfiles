@@ -11,7 +11,7 @@ View song status, ^checkout(status),
  Clear list,  mpc clear,
 
  ^tag(status)
-  Conky, conky -c ~/.conky/mpcstatus/mpcstatus 
+  Conky, conky -c ~/.config/conky/Mpcstatus/mpcstatus 
   Polybar,  polybar -r -c ~/.config/polybar/bspwm/config.ini bottom,
 
 
