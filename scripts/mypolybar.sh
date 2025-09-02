@@ -2,7 +2,7 @@
 
 killall polybar
 
-sleep 5 &
+sleep 3 &
 
 polybar -r -c ~/.config/polybar/i3/config.ini top &
 
