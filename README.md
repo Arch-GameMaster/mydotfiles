@@ -1,13 +1,25 @@
 # dotfiles
 ## Tema para polybar
 
+### Descripcion
+
+Esta barra contiene: 
+- menu de aplicaciones.
+- un mini reproductor de musica `MPD`. 
+- menu de control para el reproductor de musica.
+- barra de areas de trabajo.
+- monitor del sistema.
+- barra de notificaciones.
+- reloj.
+- control para apagar o suspender el sistema.
+
 **!!NOTA. Esto fue creado con un monitor con resolucion de 1280x720 (pero tambien es compatible con 1366x768)**
 
 
 ![Alt text](https://scontent.fmex30-1.fna.fbcdn.net/v/t39.30808-6/529122814_24454971790789465_2360246144784930007_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=_PEOeKQAiJsQ7kNvwHbUgEd&_nc_oc=AdkU7LpnW9tYVC18J7l4Gx5dmthBG_L9IjjNWQ6tVX6Zuu5hiKzEwte1kqnXboUBpj8&_nc_zt=23&_nc_ht=scontent.fmex30-1.fna&_nc_gid=HE1JQamkZgvH0821wKgLhw&oh=00_AfWb3Vv4_tSh6FhHMSLXjeWxd7VgO1CWvdMcU3tUirbQvw&oe=68B11E7D "Screenshot 1")
 
 
-### Instalacion
+### Dependencias
 
 **Para este tema se recomienta tener instalado estos programas:**
 
@@ -21,20 +33,20 @@
 8. ncmpcpp (para crear las playlist y despues [integrarlas a jgmenu](#como-integrar-mi-playlist-a-jgmenu))
 9. conky
 
-**Tambien es necesario tener instalado las siguientes fuentes:**
-1. Symbols Nerd Font Mono (para los iconos)
-2. UbuntuSans Nerd Font (opcional, puede ser cualquier otra fuente de [Nerd Fonts](https://www.nerdfonts.com/font-downloads) de tu preferencia)
-3. polycat (para el modulo "polycat")
+### Instalacion
 
-Copia/descarga cada uno de los archivos y muevelos a sus respectivos directorios dentro de ~/.config/
+Copia/descarga cada uno de los configs y colocalos a sus respectivos directorios dentro de `~/.config/`
+
+**Tambien es necesario tener instalado las siguientes fuentes:**
+1. UbuntuSans Nerd Font (para texto e iconos de la barra)
+2. Symbols Nerd Font (opcional, puede ser cualquier otra fuente de [Nerd Fonts](https://www.nerdfonts.com/font-downloads) de tu preferencia)
+3. polycat (para el modulo "polycat")
 
 ### Como usarlo?
 
-Para ejecutar este polybar, necesitas haber descargado el script "mypolybar.sh" y colocarlo en $HOME y luego ejecutarlo desde una terminal con el siguiente comando:
+Para usar este polybar, necesitas ejecutar el script 'mypolybar.sh' desde una terminal de la siguiente forma: `$ ~/mypolybar.sh`
 
-`$ ~/mypolybar.sh`
-
-**NOTA.** Para usarlo en monitores de 1920x1080+ tendras que abrir el archivo config.ini con un editor de texto y cambiar el tamaño de la barra y el tamaño de las fuentes a tu gusto
+**NOTA.** *Para usarlo en monitores de mas de 1920x1080+ tendras que abrir el archivo ~/.config/polybar/i3/config.ini con un editor de texto y cambiar el tamaño de la barra y el tamaño de las fuentes a tu gusto.*
 
 ### Como integrar mi playlist a jgmenu?
 
@@ -54,4 +66,4 @@ Con un editor de texto abre el sguiente archivo *"~/.config/jgmenu/menus/mpcmenu
 
 -   Guarda los cambios y haz la prueba dandole click al nombre de tu playlist para que se cargue y este listo para reproducir
   
-**NOTA.** No olvides agregar la coma "," entre el nombre de la playlist y el comando de ejecucion
+**NOTA.** *No olvides agregar la coma "," entre el nombre de la playlist y el comando de ejecucion*
