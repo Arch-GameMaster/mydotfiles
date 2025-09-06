@@ -1,16 +1,17 @@
-^sep(MPC Media Controls) 
- Start MPD,     mpd,
- Turn off MPD,     mpd --kill,
+^sep(Main Menu) 
+#  Start MPD,     mpd,
+#  Turn off MPD,     mpd --kill,
 View track info, ^checkout(status), 
 󰕾 Volume, ^checkout(volume),
  Shuffle,   mpc shuffle
  Repeat,     ^checkout(Repeat),
  Random,    ^checkout(Random),
-󰑘 Replay,     ^checkout(Replay),
+#󰑘 Replay,     ^checkout(Replay),
 󰑘 Single track,     ^checkout(Single),
-󰲸 Load playlist,    ^root(playlist),
- Clear list,  mpc clear,
-
+󰲸 View all playlists,    ^root(playlist),
+ Clear playlist,  mpc clear,
+^sep()
+Close Menu, ^quit()
 
  ^tag(status)
   Conky, conky -c ~/.config/conky/Mpcstatus/mpcstatus 
@@ -18,15 +19,10 @@ View track info, ^checkout(status),
 
  ^tag(volume)
   ^sep(Volume)
-#  + , mpc volume +5,
-#  - , mpc volume -5,
-#  ^sep()
     Min, mpc volume 25,
     Mid, mpc volume 50,
     Max, mpc volume 75,
     Extreme, mpc volume 100,
-#  ^sep()
-#Exit, ^quit()
 
  ^tag(Repeat)
   ON, mpc repeat on,
@@ -47,16 +43,18 @@ View track info, ^checkout(status),
   Once, mpc single once,
 
  ^tag(playlist)
-  ^sep(My playlist)
-   Post-Rock/Metal,  mpc load "Post Rock-Metal",
-   No Vocals Metal,  mpc load NoVocalsMetal,
-   Liquid DnB,   mpc load liquid_DnB,
-   DnB Dubstep Mixes,  mpc load DnB_Dubstep,
-   Synthwave,  mpc load Synthwave_n_ScifiRetro,
-   Spiritbox,  mpc load Spiritbox,
+  ^sep(Load a playlist)
+   Post-Rock/Metal,   mpc load "Post Rock-Metal",
+   No Vocals Metal,   mpc load NoVocalsMetal,
+   Liquid DnB,        mpc load liquid_DnB,
+   DnB Dubstep Mixes, mpc load DnB_Dubstep,
+   Synthwave,         mpc load Synthwave_n_ScifiRetro,
+   Spiritbox,         mpc load Spiritbox,
    Industrial Metal,  mpc load Industrial_Metalstep,
-   Metalcore,  mpc load Post-Hardcore,
-   Sci-Fi Ambient, mpc load Sci-Fi_Ambient,
-   Acid Pop/Rock,  mpc load 'Acid Rock',
-   Techno Storm, mpc load Techno_Storm,
-
+   Metalcore,         mpc load Post-Hardcore,
+   Sci-Fi Ambient,    mpc load Sci-Fi_Ambient,
+   Acid Pop/Rock,     mpc load 'Acid Rock',
+   Techno Storm,      mpc load Techno_Storm,
+   Gamemaster,        mpc load Gamemaster,
+^sep()
+Close Menu, ^quit()

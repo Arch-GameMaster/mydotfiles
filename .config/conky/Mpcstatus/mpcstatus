@@ -7,7 +7,7 @@
     xftalpha 1
     out_to_x yes
     out_to_wayland no
-    update_interval 4 
+    update_interval 2 
     #update_interval_on_battery 10 
     # total_run_times 0
     #max_user_text 0 
@@ -36,8 +36,8 @@
     use_spacer none
     uppercase false
     font1 Radio Space:pixelsize=28
-    font2 FiraMono Nerd Font:pixelsize=12
-    font3 UbuntuSans Nerd Font:pixelsize=20
+    font2 FiraMono Nerd Font:pixelsize=11
+    font3 UbuntuSans Nerd Font:pixelsize=16
     font4 Cyberway Riders:pixelsize=42 
     color1 f9e2af
     color2 fab387
@@ -46,8 +46,10 @@
     color5 eff1f5
 
 TEXT
-# ${font2}${outlinecolor 11111b}${color2}${exec mpc status "%state% %percenttime%"}${font} 
-# ${font3}${outlinecolor 11111b}${color1}${exec mpc --format "󰠃 %artist%  %title% \n󰫔 %album%" | head -2 } 
- ${font2}${color2}${if_running mpd}${mpd_status}: ${else}MPD is offline ${endif}${font}
- ${font3}${color1}󰠃 ${mpd_artist}  ${mpd_title} ${font}
- ${font3}󰫔 ${mpd_album} 
+ ${image ~/Pictures/Angel_kof-497.png -s 80x106  -p 0,0}
+ ${offset 80}${font2}${outlinecolor 11111b}${color2}${exec mpc status "\[%state%\] %percenttime% \ 󰑘 %single%"}${font} 
+ ${offset 80}${font3}${outlinecolor 11111b}${color1}${exec mpc --format "󰠃 %artist%  %title% \n                      󰫔 %album% (%date%)\n                      %genre%" | head -2 }${font} 
+# ${font2}${color2}${if_running mpd}${mpd_status}: ${else}MPD is offline ${endif}${font}
+# ${color1}${mpd_bar 3,130}
+# ${font3}${color1}󰠃 ${mpd_artist}  ${mpd_title} ${font}
+# ${font3}󰫔 ${mpd_album} 

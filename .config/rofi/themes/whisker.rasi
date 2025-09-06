@@ -9,15 +9,15 @@
  @import "~/.config/rofi/colors/catppuccin-mocha"
 
 * {
-  selected-active-foreground:  @background;
+  selected-active-foreground:  @mantle;
   lightfg:                     @text;
   separatorcolor:              @foreground;
   urgent-foreground:           @red;
   alternate-urgent-background: @lightbg;
-  lightbg:                     @background;
+  lightbg:                     @mantle;
   background-color:            transparent;
   border-color:                @foreground;
-  normal-background:           @background;
+  normal-background:           transparent;
   selected-urgent-background:  @red;
   alternate-active-background: @lightbg;
   spacing:                     2;
@@ -28,8 +28,8 @@
   background:                  @mantle;
   selected-active-background:  @blue;
   active-background:           @background;
-  selected-normal-background:  @lightfg;
-  alternate-normal-background: @lightbg;
+  selected-normal-background:  @lavender;
+  alternate-normal-background: transparent;
   foreground:                  @text;
   selected-urgent-foreground:  @background;
   normal-foreground:           @foreground;
@@ -66,7 +66,7 @@ window {
   width:  512px; 
 //  height: 768px;
 
-  background-color: #11111bc0;
+  background-color: #11111be0;
 
 //  background-image: url("~/Downloads/Anime-girls/438862041_831111709048105_1933342560581354270_n.jpg", width);
 }
@@ -87,7 +87,7 @@ element,element-text,element-icon, button {
 inputbar {
   margin: 0px 0px 0.5em 0em;
   spacing: 0.4em;
-  children: [ button-a, entry,overlay,case-indicator, button-b];
+  children: [ entry,overlay,case-indicator ];
 }
 
 button-a, button-b {
@@ -102,17 +102,17 @@ button-b {
 
 listview, inputbar, message {
   padding: 0.5em;  
-  border-color: @base;
+  border-color: @overlay0;
   border:        2px;
   border-radius: 10px;
-  background-color: #11111b64;
+  background-color: transparent;
 
   columns: 4;
   lines:   4;
 }
 listview {
   border:       0px 2px 2px 2px;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 
@@ -128,15 +128,16 @@ element-icon {
 }
 
 element  selected {
-  border-color: @blue;
+  border-color: @text;
   border:       2px;
   border-radius: 10px;
-  background-color: @base;
+  background-color: transparent;
 }
 
 element-text, element-icon {
   font:             inherit; 
   horizontal-align: 0.5;
+  background-color: transparent;
 }
 
 wrapper-mode-switcher {
@@ -144,7 +145,7 @@ wrapper-mode-switcher {
 
     expand:     false;
     spacing:    0;
-    children: [ icon-ms-ic1, mode-switcher, icon-ms-ic2 ];
+    children: [ mode-switcher ];
 }
 icon-ms-ic1 {
     filename: "go-previous";
@@ -170,7 +171,7 @@ mode-switcher {
 button {
     text-color: @foreground;
     border:       0px 0px 2px ;
-    border-color: @base;
+    border-color: @overlay0;
     border-radius:    10px 10px 0 0;
 //    background-image: linear-gradient(to bottom, #11111b64, #313244);
     background-color: transparent;
@@ -182,9 +183,10 @@ button selected.normal {
     padding: 0px;
 
     border:       2px 2px 0px ;
-    border-color: @base;
+    border-color: @overlay0;
     border-radius:    10px 10px 0 0;
-    background-image: linear-gradient(to bottom, #11111b, #313244);
+//    background-image: linear-gradient(to bottom, #11111b, #313244);
+    background-color: #11111b64;
 }
 
 entry {
