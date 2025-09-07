@@ -48,7 +48,7 @@
 TEXT
  ${image ~/Pictures/Angel_kof-497.png -s 80x106  -p 0,0}
  ${offset 80}${font2}${outlinecolor 11111b}${color2}${exec mpc status "\[%state%\] %percenttime% \ 󰑘 %single%"}${font} 
- ${offset 80}${font3}${outlinecolor 11111b}${color1}${exec mpc --format "󰠃 %artist%  %title% \n                      󰫔 %album% (%date%)\n                      %genre%" | head -2 }${font} 
+ ${offset 80}${font3}${outlinecolor 11111b}${color1}${exec mpc --format "󰠃 %artist%  %title% \n                      󰫔 %album% (%date%)\n                      %track%" | head -3 }${font} 
 # ${font2}${color2}${if_running mpd}${mpd_status}: ${else}MPD is offline ${endif}${font}
 # ${color1}${mpd_bar 3,130}
 # ${font3}${color1}󰠃 ${mpd_artist}  ${mpd_title} ${font}

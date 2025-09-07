@@ -45,6 +45,7 @@
 //}
 
 configuration {
+  modi: "drun,run,filebrowser,window";
   font: "Fira Sans 10";
   show-icons: true;
   icon-theme: "candy-icons";
@@ -52,6 +53,13 @@ configuration {
   me-select-entry: "MousePrimary";
   me-accept-entry: "!MousePrimary";
 }
+
+    filebrowser {
+      directory: "/home";
+      directories-first: true;
+      sorting-method:    "name";
+    }
+
 window {
   padding: 1em;
   location: north west;

@@ -1,60 +1,61 @@
 ^sep(Main Menu) 
-#  Start MPD,     mpd,
-#  Turn off MPD,     mpd --kill,
-View track info, ^checkout(status), 
-󰕾 Volume, ^checkout(volume),
- Shuffle,   mpc shuffle
- Repeat,     ^checkout(Repeat),
- Random,    ^checkout(Random),
-#󰑘 Replay,     ^checkout(Replay),
-󰑘 Single track,     ^checkout(Single),
+#  Start MPD,           mpd,
+#  Turn off MPD,        mpd --kill,
+View track info,         ^checkout(status), 
+󰕾 Volume,                ^checkout(volume),
+ Shuffle,               mpc shuffle
+ Repeat,                ^checkout(Repeat),
+ Random,                ^checkout(Random),
+#󰑘 Replay,               ^checkout(Replay),
+󰑘 Single track,          ^checkout(Single),
 󰲸 View all playlists,    ^root(playlist),
- Clear playlist,  mpc clear,
+ Clear playlist,         mpc clear,
 ^sep()
-Close Menu, ^quit()
+Close Menu,              ^quit()
 
  ^tag(status)
-  Conky, conky -c ~/.config/conky/Mpcstatus/mpcstatus 
+  Conky,    conky -c ~/.config/conky/Mpcstatus/mpcstatus 
   Polybar,  polybar -r -c ~/.config/polybar/bspwm/config.ini bottom,
 
  ^tag(volume)
   ^sep(Volume)
-    Min, mpc volume 25,
-    Mid, mpc volume 50,
-    Max, mpc volume 75,
+    Min,     mpc volume 25,
+    Mid,     mpc volume 50,
+    Max,     mpc volume 75,
     Extreme, mpc volume 100,
 
  ^tag(Repeat)
-  ON, mpc repeat on,
+  ON,  mpc repeat on,
   OFF, mpc repeat off,
 
  ^tag(Random)
-  ON, mpc random on,
+  ON,  mpc random on,
   OFF, mpc random off,
 
  ^tag(Replay)
-  OFF, mpc replaygain off,
+  OFF,   mpc replaygain off,
   Track, mpc replaygain track,
   Album, mpc replaygain album,
 
  ^tag(Single)
-  ON, mpc single on,
-  OFF, mpc single off,
+  ON,   mpc single on,
+  OFF,  mpc single off,
   Once, mpc single once,
 
  ^tag(playlist)
   ^sep(Load a playlist)
-   Post-Rock/Metal,   mpc load "Post Rock-Metal",
-   No Vocals Metal,   mpc load NoVocalsMetal,
-   Liquid DnB,        mpc load liquid_DnB,
-   DnB Dubstep Mixes, mpc load DnB_Dubstep,
-   Synthwave,         mpc load Synthwave_n_ScifiRetro,
-   Spiritbox,         mpc load Spiritbox,
-   Industrial Metal,  mpc load Industrial_Metalstep,
-   Metalcore,         mpc load Post-Hardcore,
-   Sci-Fi Ambient,    mpc load Sci-Fi_Ambient,
    Acid Pop/Rock,     mpc load 'Acid Rock',
-   Techno Storm,      mpc load Techno_Storm,
+   Classic Trance,    mpc load Classic_Trance,
+   DnB Dubstep Mixes, mpc load DnB_Dubstep,
    Gamemaster,        mpc load Gamemaster,
+   Industrial Metal,  mpc load Industrial_Metalstep,
+   Liquid DnB,        mpc load liquid_DnB,
+   Metalcore,         mpc load Post-Hardcore,
+   No Vocals Metal,   mpc load NoVocalsMetal,
+   Post-Rock/Metal,   mpc load "Post Rock-Metal",
+   Sci-Fi Ambient,    mpc load Sci-Fi_Ambient,
+   Spiritbox,         mpc load Spiritbox,
+   Synthwave,         mpc load Synthwave_n_ScifiRetro,
+   Techno Storm,      mpc load Techno_Storm,
 ^sep()
-Close Menu, ^quit()
+Close Menu,            ^quit()
