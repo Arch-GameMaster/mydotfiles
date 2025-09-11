@@ -1,0 +1,413 @@
+/**
+ * 
+ */
+
+
+ @import "~/.config/rofi/colors/catppuccin-latte"
+// @import "colors/catppuccin-frappe"
+// @import "colors/catppuccin-macchiato"
+// @import "~/.config/rofi/colors/catppuccin-mocha"
+
+* {
+  selected-active-foreground:  @background;
+  lightfg:                     @text;
+  separatorcolor:              @foreground;
+  urgent-foreground:           @red;
+  alternate-urgent-background: @lightbg;
+  lightbg:                     @background;
+  background-color:            transparent;
+  border-color:                @foreground;
+  normal-background:           @background;
+  selected-urgent-background:  @red;
+  alternate-active-background: @lightbg;
+  spacing:                     2;
+  alternate-normal-foreground: @foreground;
+  urgent-background:           @background;
+  selected-normal-foreground:  @lightbg;
+  active-foreground:           @blue;
+  background:                  @mantle;
+  selected-active-background:  @blue;
+  active-background:           @background;
+  selected-normal-background:  @lightfg;
+  alternate-normal-background: @lightbg;
+  foreground:                  @text;
+  selected-urgent-foreground:  @background;
+  normal-foreground:           @foreground;
+  alternate-urgent-foreground: @red;
+  alternate-active-foreground: @blue;
+
+
+	line-margin: 2;
+	line-padding: 2;
+	separator-style: "none";
+	hide-scrollbar: "false";
+	margin: 0;
+	padding: 0;
+	}
+configuration {
+	show-icons: true;
+	icon-theme: "Win11";
+	    font: "UbuntuSans Nerd Font 12";
+    location: 						1;
+    fixed-num-lines: 				true;
+    show-icons: 					false;
+    sidebar-mode: 					true;
+    scroll-method: 					0;
+    click-to-exit: 					true;
+    combi-hide-mode-prefix: 		false;
+    modi: "drun";
+}
+
+window {
+	location: west;
+	anchor:	west;
+	y-offset: 96px;
+    margin: 0 0 0 0;
+	height:	512px;
+	width: 420px;
+	orientation: vertical;
+	children: [top-deco, mainbox, inputbar, bottom-deco];
+    background-color: @blue;
+
+	border: 1px 1px solid 1px 1px;
+    border-color: @blue;
+    border-radius: 9px 9px 0px 0px;
+}
+
+mainbox {
+    padding: 0;
+	children: [ left-half, right-half ];
+    orientation: horizontal;
+
+    lines: 2;
+    columns: 2;
+    spacing: 1em;
+    fixed-columns: true;
+    background-color: @base;
+
+	border: 0 3px solid 0 2px;
+	border-color: #1D65D2;
+    border-radius: 1px;
+}
+
+left-half{
+	children: [ listview, delim-left, more ];
+    background-color: @yellow;
+    background-color: #00000000;
+}
+more{
+    expand: false;
+    background-color: #00000000;
+    children: [ textbox-more, icon-more ];
+    orientation: horizontal;
+    padding: 7px 0 10px 25px;
+}
+
+textbox-more{
+    expand: false;
+    margin:	2px 4px 0px 15px;
+    font: "Roboto bold 10";
+    background-color: #00000000;
+    text-color: black;
+    str: "All Programs";
+}
+icon-more{
+    background-color: #00000000;
+    padding: 0 0 0 0;
+    expand: false;
+    size: 1.1em;
+    filename: "go-next";
+}
+
+right-half{
+    padding: 0;
+    width: 230px;
+    padding: 15px;
+    expand: false;
+	cycle: false;
+    orientation: vertical;
+    children: [ docs, pics, musc, vids, comp ];
+    background-color: @surface0;
+	border: 0 0 solid 0 2px;
+	border-color: @overlay1;
+
+}
+
+docs, pics, musc, comp, vids{
+    padding: 7px 0 6px 0;
+    background-color: #00000000;
+    orientation: horizontal;
+	expand: false;
+}
+docs{
+    padding: 0;
+    children: [icon-docs,textbox-docs];
+}
+pics{
+    children: [icon-pics,textbox-pics];
+}
+musc{
+    children: [icon-musc,textbox-musc];
+}
+comp{
+    children: [icon-comp,textbox-comp];
+}
+vids{
+    children: [icon-vids,textbox-vids];
+}
+net-set{
+    children: [icon-net-set,textbox-net-set];
+}
+tasks{
+    children: [icon-tasks,textbox-tasks];
+}
+find{
+    children: [icon-find,textbox-find];
+}
+appearence{
+    children: [icon-appearence,textbox-appearence];
+}
+info{
+    children: [icon-info,textbox-info];
+}
+cpanel{
+    children: [icon-cpanel,textbox-cpanel];
+}
+print{
+    children: [icon-print,textbox-print];
+}
+
+textbox-docs, textbox-pics, textbox-musc, textbox-comp, textbox-vids{
+    expand: false;
+    margin: 0px 4px 0px 15px;
+    font: "Roboto 10";
+    background-color: #00000000;
+    text-color: black;
+}
+
+textbox-docs, textbox-pics, textbox-musc, textbox-comp, textbox-vids{
+    font: "Roboto bold 10";
+}
+
+icon-docs, icon-pics, icon-musc, icon-comp, icon-vids{
+    background-color: #00000000;
+    padding: 0px;
+    expand: false;
+    size: 1.0em;
+}
+
+textbox-docs{
+    str: "My Documents";
+}
+icon-docs{
+    filename: "default-folder-documents";
+}
+
+textbox-pics{
+    str: "My Pictures";
+}
+icon-pics{
+    filename: "default-folder-pictures";
+}
+
+textbox-musc{
+    str: "My Music";
+}
+icon-musc{
+    filename: "default-folder-music";
+}
+
+textbox-comp{
+    str: "My Computer";
+}
+icon-comp{
+    filename: "computersettings";
+}
+
+textbox-vids{
+    str: "My Videos";
+}
+icon-vids{
+    filename: "default-folder-video";
+}
+
+textbox-find{
+    str: "Search";
+}
+icon-find{
+    filename: "search-symbolic";
+}
+
+textbox-info{
+    str: "Help and Support";
+}
+icon-info{
+    filename: "~/Documents/arch/rice/win_xp/icons/info.ico";
+}
+
+textbox-net-set{
+    str: "Network Settings";
+}
+icon-net-set{
+    filename: "~/Documents/arch/rice/win_xp/icons/net-set.ico";
+}
+
+textbox-tasks{
+    str: "Tasks";
+}
+icon-tasks{
+    filename: "~/Documents/arch/rice/win_xp/icons/tasks.ico";
+}
+
+textbox-appearence{
+    str: "Customize Appearence";
+}
+icon-appearence{
+    filename: "~/Documents/arch/rice/win_xp/icons/appearence.ico";
+}
+
+textbox-cpanel{
+    str: "Control Panel";
+}
+icon-cpanel{
+    filename: "~/Documents/arch/rice/win_xp/icons/cpanel.ico";
+}
+
+textbox-print{
+    str: "Printers and Faxes";
+}
+icon-print{
+    filename: "~/Documents/arch/rice/win_xp/icons/print.ico";
+}
+
+
+top-deco, bottom-deco {
+	expand: false;
+    padding: 17px;
+    background-color: @blue;
+//    background-color: rgb(72,141,237);
+//    background-image: linear-gradient(to bottom, #1D65D2, #488DED);
+}
+
+top-deco{
+    children: [textbox-top-label];
+}
+textbox-top-label{
+    str: "Administrator";
+    padding: 0 0 0 8px;
+    background-color: #00000000;
+    expand: false;
+    font: "Roboto bold 12";
+    text-color: white;
+}
+
+bottom-deco {
+    orientation: horizontal;
+    children: [log-off, power-off];
+    padding: 13px;
+}
+
+power-off, log-off{
+    orientation: horizontal;
+}
+
+log-off {
+    children: [icon-log-off, textbox-log-off];
+}
+
+power-off {
+    children: [icon-power-off, textbox-power-off];
+}
+
+log-off, power-off, icon-power-off, icon-log-off, textbox-power-off, textbox-log-off {
+    background-color: #00000000;
+    expand: false;
+    font: "Roboto 8";
+}
+
+icon-log-off, icon-power-off{
+    size: 1.4em;
+}
+
+textbox-log-off, textbox-power-off{
+    padding: 6px 0 0 3px;
+    text-color: white;
+}
+
+icon-log-off{
+    margin: 0 0 0 145px;
+    filename: "~/Downloads/themes-icons/lock.png";
+}
+textbox-log-off{
+    str: "Lock";
+}
+
+icon-power-off{
+    margin: 0 0 0 25px;
+    filename: "~/Downloads/themes-icons/turn-off.png";
+}
+textbox-power-off{
+    str: "Power Off";
+}
+
+
+delim-left {
+    expand: false;
+//    background-image: linear-gradient(to right, @base, #EAEAE8, #EAEAE8, @base);
+    background-color: black;
+    padding: 1px 0 0 0;
+    margin: 2px 0 2px 20px;
+}
+
+delim-right {
+    expand: false;
+//    background-image: linear-gradient(to right, #@overlay0, #BFD5E6, #BFD5E6, #@overlay0);
+    padding: 1px 0 0 0;
+    margin: 2px 0 3px 0;
+}
+
+
+listview {
+    padding: 5px 0 0 15px;
+	spacing: 0.13em;
+	dynamic: false;
+	cycle:   true;
+    background-color: @base;
+    font:   "Roboto 12";
+}
+
+element {
+    padding: 4px;
+    children: [ element-icon, element-text ];
+    background-color: #00000000;
+}
+element-text {
+    background-color: #00000000;
+    font: "Roboto 10";
+    padding: 8px 0 0 3px;
+	text-color: #000000;
+}
+
+element-text selected.normal{
+	text-color: white;
+}
+element-icon {
+    background-color: #00000000;
+    size: 1.7em;
+}
+
+entry {
+    enabled: false;
+}
+
+element selected.normal {
+	text-color: white;
+    background-color: #316AC5;
+	border: 1px 1px solid 1px 1px;
+	border-color: #5082CF;
+}
+
+
+inputbar {
+    enabled: false;
+}
