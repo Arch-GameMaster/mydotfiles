@@ -50,7 +50,6 @@ configuration {
 	    font: "UbuntuSans Nerd Font 12";
     location: 						1;
     fixed-num-lines: 				true;
-    show-icons: 					false;
     sidebar-mode: 					true;
     scroll-method: 					0;
     click-to-exit: 					true;
