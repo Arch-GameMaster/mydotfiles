@@ -46,7 +46,8 @@ Close Menu,              ^quit()
   ^sep(Load a playlist)
    Acid Pop/Rock,     mpc load 'Acid Rock',
    Classic Trance,    mpc load Classic_Trance,
-   DnB Dubstep Mixes, mpc load DnB_Dubstep,
+   DnB Dubstep,       mpc load DnB_Dubstep,
+   DnB FullAlbum Mix, mpc load DnB_Podcast,
    Gamemaster,        mpc load Gamemaster,
    Industrial Metal,  mpc load Industrial_Metalstep,
    Liquid DnB,        mpc load liquid_DnB,

@@ -71,8 +71,8 @@ window {
   border:       2px;
   border-radius: 10px;
 
-  width:  512px; 
-//  height: 768px;
+  width:  360px; 
+  height: 480px;
 
   background-color: #11111be0;
 
@@ -116,7 +116,7 @@ listview, inputbar, message {
   background-color: transparent;
 
   columns: 4;
-  lines:   4;
+//  lines:   4;
 }
 listview {
   border:       0px 2px 2px 2px;
@@ -132,7 +132,8 @@ element {
     orientation: vertical;
 }
 element-icon {
-  size: 3em;
+//  size: 3em;
+  size: 32px;
 }
 
 element  selected {
