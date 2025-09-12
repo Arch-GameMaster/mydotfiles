@@ -1,5 +1,5 @@
 /**
- * 
+ * Author: YoMero
  */
 
 
@@ -47,13 +47,13 @@
 configuration {
 	show-icons: true;
 	icon-theme: "Win11";
-	    font: "UbuntuSans Nerd Font 12";
-    location: 						1;
-    fixed-num-lines: 				true;
-    sidebar-mode: 					true;
-    scroll-method: 					0;
-    click-to-exit: 					true;
-    combi-hide-mode-prefix: 		false;
+    font: "UbuntuSans Nerd Font 10";
+    location: 		1;
+    fixed-num-lines: 	true;
+    sidebar-mode: 	true;
+    scroll-method: 	0;
+    click-to-exit: 	true;
+    combi-hide-mode-prefix: 	false;
     modi: "drun";
 }
 
@@ -69,7 +69,7 @@ window {
     background-color: @blue;
 
 	border: 1px 1px solid 1px 1px;
-    border-color: @blue;
+    border-color: @lavender;
     border-radius: 9px 9px 0px 0px;
 }
 
@@ -237,48 +237,6 @@ icon-find{
     filename: "search-symbolic";
 }
 
-textbox-info{
-    str: "Help and Support";
-}
-icon-info{
-    filename: "~/Documents/arch/rice/win_xp/icons/info.ico";
-}
-
-textbox-net-set{
-    str: "Network Settings";
-}
-icon-net-set{
-    filename: "~/Documents/arch/rice/win_xp/icons/net-set.ico";
-}
-
-textbox-tasks{
-    str: "Tasks";
-}
-icon-tasks{
-    filename: "~/Documents/arch/rice/win_xp/icons/tasks.ico";
-}
-
-textbox-appearence{
-    str: "Customize Appearence";
-}
-icon-appearence{
-    filename: "~/Documents/arch/rice/win_xp/icons/appearence.ico";
-}
-
-textbox-cpanel{
-    str: "Control Panel";
-}
-icon-cpanel{
-    filename: "~/Documents/arch/rice/win_xp/icons/cpanel.ico";
-}
-
-textbox-print{
-    str: "Printers and Faxes";
-}
-icon-print{
-    filename: "~/Documents/arch/rice/win_xp/icons/print.ico";
-}
-
 
 top-deco, bottom-deco {
 	expand: false;
@@ -292,7 +250,7 @@ top-deco{
     children: [textbox-top-label];
 }
 textbox-top-label{
-    str: "Administrator";
+    str: "Antonio";
     padding: 0 0 0 8px;
     background-color: #00000000;
     expand: false;
@@ -392,7 +350,7 @@ element-text selected.normal{
 }
 element-icon {
     background-color: #00000000;
-    size: 1.7em;
+    size: 1.1em;
 }
 
 entry {
