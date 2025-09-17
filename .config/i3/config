@@ -202,7 +202,7 @@ for_window [class="Xterm"] floating enable
 for_window [class="Sakura"] floating enable
 for_window [class="Conky-manager2"] floating enable
 for_window [class="Plank"] floating enable border pixel 0
-
+for_window [class="Pcmanfm"] floating enable
 
 gaps inner 0
 gaps outer 5
@@ -213,8 +213,8 @@ focus_follows_mouse no
 # plank floating enable
 
 #Choose a theme color
- include ~/.config/i3/themes/dark.conf
-# include ~/.config/i3/themes/wxp.conf
+# include ~/.config/i3/themes/dark.conf
+ include ~/.config/i3/themes/wxp.conf
 
 #Enable i3bar
 # include ~/.config/i3/bar.conf

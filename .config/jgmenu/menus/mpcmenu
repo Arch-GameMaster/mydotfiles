@@ -19,6 +19,11 @@ Close Menu,              ^quit()
 
  ^tag(volume)
   ^sep(Volume)
+  - volume down,     mpc volume -5,
+  + volume up,     mpc volume +5,
+
+ ^tag(old-volume)
+  ^sep(Volume)
     Min,     mpc volume 25,
     Mid,     mpc volume 50,
     Max,     mpc volume 75,
