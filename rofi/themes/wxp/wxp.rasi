@@ -1,0 +1,255 @@
+/**
+ * ROFI Color theme
+ * User: Yo_Mero_:v
+ * Copyright: free
+ */
+ @import "~/.config/rofi/colors/catppuccin-latte"
+// @import "colors/catppuccin-frappe"
+// @import "colors/catppuccin-macchiato"
+// @import "~/.config/rofi/colors/catppuccin-mocha"
+
+* {
+  selected-active-foreground:  @background;
+  lightfg:                     @text;
+  separatorcolor:              @foreground;
+  urgent-foreground:           @red;
+  alternate-urgent-background: @lightbg;
+  lightbg:                     @background;
+  background-color:            transparent;
+  border-color:                @foreground;
+  normal-background:           @background;
+  selected-urgent-background:  @red;
+  alternate-active-background: @lightbg;
+  spacing:                     2;
+  alternate-normal-foreground: @foreground;
+  urgent-background:           @background;
+  selected-normal-foreground:  @lightbg;
+  active-foreground:           @blue;
+  background:                  @mantle;
+  selected-active-background:  @blue;
+  active-background:           @background;
+  selected-normal-background:  @lavender;
+  alternate-normal-background: @lightbg;
+  foreground:                  "black";
+  selected-urgent-foreground:  @background;
+  normal-foreground:           @foreground;
+  alternate-urgent-foreground: @red;
+  alternate-active-foreground: @blue;
+
+}
+
+
+configuration {
+  modi: "drun,run,window,filebrowser";
+  font: "Fira Sans 10";
+  show-icons: true;
+  icon-theme: "Win10Sur";
+  hover-select: true;
+  me-select-entry: "MousePrimary";
+  me-accept-entry: "!MousePrimary";
+      fixed-num-lines: 	true;
+    sidebar-mode: 	true;
+    scroll-method: 	0;
+}
+window {
+  spacing: 4px;
+  padding: 0em;
+  location: south west;
+  anchor: south west;
+  x-offset: 0px;
+  y-offset: -31px;
+
+  border-color: @lavender;
+  border:       2px;
+  border-radius: 10px 10px 0px 0px; 
+
+  width:  420px; 
+  height: 512px;
+
+  background-color: @blue;
+  children: [ textbox-top-label,icon-user,mainbox, inputbar ];
+}
+
+mainbox {
+  spacing: 0px;
+  lines: 2;
+  columns: 2;
+  orientation: horizontal;
+  spacing: 2px;
+  fixed-columns: true;
+  children: [ left-half, right-half ];
+}
+
+left-half{
+	children: [ listview ];
+    border: 3px 0 0 5px;
+    border-color: @blue;
+    background-color: #00000000;
+}
+
+element {
+  background: transparent;
+  children: [ element-icon, element-text ];
+}
+element,element-text,element-icon, button {
+    cursor: pointer;
+}
+
+userid {
+    children: [ textbox-top-label ];
+}
+
+textbox-top-label{
+    str: "Administrator";
+    padding: 20px 0 0 65px;
+    background-color: #00000000;
+    expand: false;
+    font: "Roboto bold 12";
+    text-color: white;
+    }
+icon {
+  padding: 40px;
+  chilcdren: [ icon-user ];
+}
+icon-user {
+    background-color: transparent;
+    padding: 0px;
+    margin: -40 0 0 -350px;
+    expand: false;
+    size: 3.5em;
+//    }
+//    icon-user {
+    filename: "~/.face";
+    }
+
+inputbar {
+  margin: 0px 0px 0em 0em;
+  spacing: 0.4em;
+  children: [ entry ];
+}
+
+button-a, button-b {
+  expand: false;
+  content: "🐧";
+  action: "kb-primary-paste";
+  horizontal-align: 0.5;
+}
+button-b {
+  action: "kb-screenshot";
+}
+
+listview, message {
+  padding: 0.5em;  
+  border-color: @base;
+  border:        2px;
+  border-radius: 0px;
+  background-color: @base;
+
+  columns: 1;
+  lines:   5;
+}
+listview {
+  border:       0px 2px 2px 2px;
+//  border-radius: 10px 10px 10px 10px;
+//  layout: vertical;
+  orientation: horizontal;
+}
+
+
+element {
+    border:  0;
+    border-radius: 10px;
+    padding:      10px;
+    font:         "Adwaita Sans 8";
+    orientation: horizontal;
+}
+element-icon {
+  size: 1.5em;
+}
+
+element  selected {
+  border-color: @lavender;
+  border:       2px;
+  border-radius: 10px;
+  background-color: @base;
+}
+
+element-text, element-icon {
+  font:             inherit; 
+  horizontal-align: 0.5;
+}
+
+right-half{
+    padding: 0;
+    width: 180px;
+    padding: 15px;
+    expand: false;
+	cycle: false;
+    children: [ mode-switcher ];
+    background-color: #8aadf4;
+    border: 3px 5px 0 0;
+    border-color: @blue;
+}
+
+wrapper-mode-switcher {
+    orientation: horizontal;
+
+    expand:     false;
+    spacing:    0;
+    children: [ mode-switcher ];
+}
+
+icon-ms-ic1 {
+    filename: "go-previous";
+    action: "kb-mode-previous";
+}
+icon-ms-ic2 {
+    filename: "go-next";
+    action: "kb-mode-next";
+}
+icon-ms-ic1,icon-ms-ic2 {
+    size: 16;
+    vertical-align: 0.8;
+    expand:        false;
+    border:       0px 0px 2px ;
+    border-color: transparent;
+}
+
+mode-switcher {
+    border:  0px;
+    spacing: 1em;
+    expand: false;
+    orientation: vertical;
+}
+button {
+    text-color: darkblue;
+    font: "FiraMono Nerd Font Bold 10";
+    padding: 0.5em;
+    border:       0px 0px 0px ;
+    border-color: @base;
+    border-radius:    10px 10px 0 0;
+//    background-image: linear-gradient(to bottom, #11111b64, #313244);
+    background-color: transparent;
+    horizontal-align: 0.5;
+}
+button selected.normal {
+    text-color: white;
+    margin: 0 0 0 30px;
+    font: "FiraMono Nerd Font Bold 10";
+//    border:       1px 1px 1px ;
+    border-color: #99d1db;
+    border-radius:    3px 3px 3px 3px;
+//    background-image: linear-gradient(to bottom, #11111b, #313244);
+//    background-color: #99d1db;
+}
+
+entry {
+    
+    placeholder: "󰍉 Type to search";
+    placeholder-color: @overlay0;
+    text-color: @surface0;
+    background-color: transparent;
+    padding: 10px;
+    border: 0px 0px 0px 0px;
+    border-color: @surface0;
+  }
