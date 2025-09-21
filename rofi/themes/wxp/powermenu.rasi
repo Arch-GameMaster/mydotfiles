@@ -174,7 +174,7 @@ icon-deco{
     padding: 0 0px;
     background-color: @blue;
     size:    2.5em;
-    margin:  -5px 0 0 140px;
+    margin:  0px 0 0 140px;
     filename: "start-here-archlinux";
 }
 
