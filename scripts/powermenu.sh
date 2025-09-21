@@ -90,7 +90,7 @@ case ${chosen} in
     $lock)
 		if 
 			[[ -x '/usr/bin/i3lock' ]]; then
-			$HOME/scripts/locker.sh
+			i3lock -c '0000b1'
 		fi
         ;;
     $suspend)
