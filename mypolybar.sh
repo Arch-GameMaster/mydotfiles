@@ -2,9 +2,7 @@
 
 killall polybar
 
-sleep 5 &
+sleep 3 &
 
-#polybar -r -c ~/.config/polybar/i3/config.ini top &
-#polybar -r -c ~/.config/polybar/bspwm/config.ini top &
 polybar -r -c ~/.config/polybar/wxp/config.ini bottom &
 
