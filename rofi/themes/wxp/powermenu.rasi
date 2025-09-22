@@ -162,19 +162,13 @@ element selected.normal {
     text-color:                  @base;
 }
 
-top-deco {
-	expand: false;
-    padding: 17px;
-//    background-color: rgb(72,141,237);
-}
-
 
 icon-deco{
     expand:  false;
     padding: 0 0px;
     background-color: @blue;
     size:    2.5em;
-    margin:  0px 0 0 140px;
-    filename: "start-here-archlinux";
+    margin:  0 0 0 12.5%;
+    filename: "start-here";
 }
 
