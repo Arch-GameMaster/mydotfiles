@@ -6,7 +6,7 @@
 
 - Rofi
 - Polybar
-- i3lock
+
 
 ### Needed fonts
 
@@ -14,6 +14,5 @@
 - Symbols Nerd Font
 
 ## Installation
-
-Move the `polybar` and `rofi` directories into your `~/.config` directory. And put the `scripts` directory in your `$HOME`
+Copy the `polybar` and `rofi` directories into your `~/.config` directory. And put the `scripts` directory in your `$HOME`
 Start `mypolybar.sh` from your terminal and enjoy.
